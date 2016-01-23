@@ -18,3 +18,8 @@ pub extern fn process() {
               h.join().map_err(|_| "Could not join a thread!").unwrap());
   }
 }
+
+#[no_mangle]
+pub extern fn demo(name: &str) {
+  println!("{}, Hello world!", name.to_string());
+}
