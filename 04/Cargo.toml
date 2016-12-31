@@ -1,0 +1,7 @@
+[package]
+name = "04"
+version = "0.1.0"
+authors = ["Sergey Sova <i.am@lestad.net>"]
+
+[dependencies]
+rand = "0.3.15"
