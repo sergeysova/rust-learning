@@ -4,8 +4,20 @@ use std::io::stdin;
 use rand::Rng;
 use std::cmp::Ordering;
 
+trait Demo {
+    fn count(&self) -> u32;
+}
+
+impl Demo for i32 {
+    fn count(&self) -> u32 {
+        if *self < 0 { 0 } else { *self as u32 }
+    }
+}
+
 fn main() {
     println!("Guess number!");
+
+    println!("{}", (-12).count());
 
     let secret_number = rand::thread_rng().gen_range(1, 101);
 
